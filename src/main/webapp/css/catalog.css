@@ -1,0 +1,122 @@
+/* Основной стиль страницы */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f5;
+}
+
+/* Шапка */
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Фильтры */
+.filters {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.filters select,
+.filters input[type="text"] {
+    margin: 0 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Сетка каталога */
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Карточки */
+.place-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.place-card:hover {
+    transform: scale(1.05);
+}
+
+.place-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.place-card .content {
+    padding: 15px;
+}
+
+.place-card h2 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.place-card p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.place-card .rating {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.place-card .rating span {
+    color: gold;
+    margin-right: 5px;
+}
+
+.place-card button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.place-card button:hover {
+    background-color: #0056b3;
+}
+
+/* Кнопка "Избранное" */
+.favorite {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.favorite:hover {
+    background: #ffcccb;
+}

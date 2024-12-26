@@ -4,24 +4,24 @@
     <title>Register</title>
 </head>
 <body>
-<h1>Регистрация</h1>
+<h1>Register</h1>
 <form action="/register" method="post">
-    <label for="username">Имя пользователя:</label>
+    <label for="username">Username:</label>
     <input type="text" id="username" name="username" required>
     <br>
-    <label for="email">Почта:</label>
+    <label for="email">Email:</label>
     <input type="email" id="email" name="email" required>
     <br>
-    <label for="password">Пароль:</label>
+    <label for="password">Password:</label>
     <input type="password" id="password" name="password" required>
     <br>
-    <label for="role">Роль:</label>
+    <label for="role">Role:</label>
     <select id="role" name="role">
-        <option value="user" selected>Пользователь</option>
-        <option value="admin">Администратор</option>
+        <option value="user" selected>User</option>
+        <option value="admin">Admin</option>
     </select>
     <br><br>
-    <input type="submit" value="Зарегистрироваться">
+    <input type="submit" value="Register">
 </form>
 </body>
 </html>

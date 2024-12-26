@@ -19,7 +19,7 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/jsp/login.jsp").forward(req, resp); // Отображение страницы логина
+        req.getRequestDispatcher("/jsp/login.jsp").forward(req, resp);
     }
 
     @Override
@@ -33,12 +33,12 @@ public class LoginServlet extends HttpServlet {
             if (user != null) {
                 HttpSession session = req.getSession(false);
                 if (session != null) {
-                    session.invalidate();  // Invalidate previous session to prevent session fixation
+                    session.invalidate();
                 }
-                session = req.getSession(true);  // Create a new session
+                session = req.getSession(true);
                 session.setAttribute("user", user);
 
-                // Secure the session with HttpOnly and Secure flags if using HTTPS
+
                 resp.setHeader("Set-Cookie", "JSESSIONID=" + session.getId() + "; HttpOnly; Secure");
 
                 if ("admin".equals(user.getRole())) {
@@ -51,7 +51,7 @@ public class LoginServlet extends HttpServlet {
                 req.getRequestDispatcher("/jsp/login.jsp").forward(req, resp);
             }
         } catch (SQLException e) {
-            // Log the error for debugging purposes
+
             e.printStackTrace();
             throw new ServletException("Error authenticating user", e);
         }

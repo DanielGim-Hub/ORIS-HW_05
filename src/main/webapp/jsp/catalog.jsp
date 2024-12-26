@@ -7,6 +7,9 @@
 <body>
 <header>
   <h1>Travel Planner Catalog</h1>
+  <div class="logout">
+    <a href="/logout">Logout</a>
+  </div>
 </header>
 <div class="filters">
   <input type="text" placeholder="Search destinations..." id="searchInput">

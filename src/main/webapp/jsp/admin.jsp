@@ -31,15 +31,11 @@
   <a href="/logout">Logout</a>
 </div>
 
-<!-- Search Form -->
 <form method="get" action="/admin">
   <input type="text" name="search" placeholder="Search by username or role" value="${param.search}">
   <button type="submit">Search</button>
 </form>
 
-
-
-<!-- Users Table -->
 <table>
   <thead>
   <tr>
@@ -55,9 +51,6 @@
     <tr>
       <td colspan="5" style="text-align: center;">No users found</td>
     </tr>
-  </c:if>
-  <c:if test="${not empty error}">
-    <p style="color: red;">${error}</p>
   </c:if>
   <c:forEach var="user" items="${users}">
     <tr>
@@ -84,7 +77,6 @@
       </td>
     </tr>
   </c:forEach>
-
   </tbody>
 </table>
 

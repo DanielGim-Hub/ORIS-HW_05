@@ -4,15 +4,15 @@
     <title>Login</title>
 </head>
 <body>
-<h1>Вход в систему</h1>
+<h1>Login</h1>
 <form action="/login" method="post">
-    <label for="username">Имя пользователя:</label>
+    <label for="username">Username:</label>
     <input type="text" id="username" name="username" required>
     <br>
-    <label for="password">Пароль:</label>
+    <label for="password">Password:</label>
     <input type="password" id="password" name="password" required>
     <br>
-    <input type="submit" value="Войти">
+    <input type="submit" value="Login">
 </form>
 <c:if test="${not empty error}">
     <p style="color: red;">${error}</p>
